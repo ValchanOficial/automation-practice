@@ -8,7 +8,6 @@ Donwload do projeto: [Automation Practice](https://github.com/ValchanOficial/aut
 Softwares necessários:
 IDE: [Eclipse](http://www.eclipse.org/)
 Java: [Java](http://www.oracle.com/technetwork/pt/java/index.html)
-Git: [Git](https://git-scm.com/downloads)
 
 Preparação do ambiente - passo a passo:
  1. Baixe e instale o Eclipse;
