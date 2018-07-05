@@ -28,12 +28,12 @@ Mozilla Firefox: [Mozilla](https://www.mozilla.org/pt-BR/firefox/new/)
  2. Baixe e instale o Java: JRE e JDK;
  3. Baixe e instale o Mozilla Firefox;
  4. Configure o Java no Windows 10: vá até o Painel de Controle > Sistema e Segurança > Sistema;
- 5. Clique em "Configurações avançadas do sistem"a;
+ 5. Clique em "Configurações avançadas do sistema";
  6. Clique em "Variáveis de Ambiente...";
  7. Clique no botão “Nova” em “Variáveis do sistema”;
- 8. Digite no nome da variável: JAVA_HOME;
+ 8. Digite no nome da variável: "JAVA_HOME";
  9. No valor da variável: coloque o endereço onde foi instalado. Exempo: “C:\Program Files\Java\jdk1.8.0_171”;
- 10. Clique em OK;
+ 10. Clique em "OK";
  11. Selecione "Path" e clique em "Editar...";
  12. Clique em "Novo" e digite "%JAVA_HOME%\bin" depois clique em "OK";
  13. Clique em "OK" novamente para salvar as configurações;
