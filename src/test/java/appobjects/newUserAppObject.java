@@ -49,6 +49,9 @@ public class newUserAppObject {
 	public WebElement postCode() {
 		return this.driver.findElement(By.id("postcode"));
 	}
+	public WebElement country() {
+		return this.driver.findElement(By.id("id_country"));
+	}
 	public WebElement mobilePhone() {
 		return this.driver.findElement(By.id("phone_mobile"));
 	}

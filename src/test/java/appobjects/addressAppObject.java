@@ -13,5 +13,4 @@ public class addressAppObject {
 	public WebElement proceed() {
 		return this.driver.findElement(By.id("button btn btn-default button-medium"));
 	}
-	//falta completar	
 }
