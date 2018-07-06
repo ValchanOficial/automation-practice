@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class addProductToCartAppObject {
 	private WebDriver driver;
-	
+
 	public addProductToCartAppObject(WebDriver driver) {
 		this.driver = driver;
 	}	
@@ -17,7 +17,7 @@ public class addProductToCartAppObject {
 		return this.driver.findElement(By.id("add_to_cart"));
 	}
 	public WebElement total() {
-		return this.driver.findElement(By.className("ajax_block_cart_total"));//$18.51
+		return this.driver.findElement(By.id("total_price"));
 	}
 	public WebElement proceedToCheckout() {
 		WebDriverWait wait = new WebDriverWait(driver,10);
@@ -25,7 +25,7 @@ public class addProductToCartAppObject {
 		return element;
 	}
 	public WebElement productNameCheck() {
-		return this.driver.findElement(By.className("product-name"));//Faded Short Sleeve T-shirts
+		return this.driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[3]/h1"));
 	}
 	public WebElement proceedToCheckoutSummary() {
 		return this.driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/p[2]/a[1]"));

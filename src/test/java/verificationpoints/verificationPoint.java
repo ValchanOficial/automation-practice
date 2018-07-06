@@ -6,9 +6,7 @@ import framework.report;
 import framework.screenshot;
 
 public class verificationPoint {
-	private static final String PRODUCT_NAME = "Faded Short Sleeve T-shirts";
-	private static final String CHECK_ORDER = "Your order on My Store is complete.";
-	private static final String CHECK_TOTAL = "$18.51";
+	private String CHECK_ORDER = "Your order on My Store is complete.";
 	private WebDriver driver;
 	
 	public verificationPoint(WebDriver driver) {
@@ -18,27 +16,31 @@ public class verificationPoint {
 		return this.driver.getPageSource().contains(text);
 	}
 	public void checkProduct(String name) {
-		if(name == PRODUCT_NAME) {
-			report.log(Status.PASS, "Produto correto.", screenshot.capture(driver));
+		if(this.pageContains(name)) {
+			report.log(Status.PASS, "Validação - Produto correto.", screenshot.capture(driver));
 		} else {
-			report.log(Status.FAIL, "Produto incorreto.", screenshot.capture(driver));
+			report.log(Status.FAIL, "Validação - Produto incorreto.", screenshot.capture(driver));
 		}
 	}
 	public void checkOrder() {
 		if(this.pageContains(CHECK_ORDER)) {
-			report.log(Status.PASS, "Compra realizada com sucesso.", screenshot.capture(driver));
+			report.log(Status.PASS, "Validação - Compra realizada com sucesso.", screenshot.capture(driver));
 		} else {
-			report.log(Status.FAIL, "Falha ao comprar.", screenshot.capture(driver));
+			report.log(Status.FAIL, "Validação - Falha ao comprar.", screenshot.capture(driver));
 		}
 	}
 	public void checkTotal(String total) {
-		if(total == CHECK_TOTAL) {
-			report.log(Status.PASS, "Valor total da compra correto.", screenshot.capture(driver));
+		if(this.pageContains(total)) {
+			report.log(Status.PASS, "Validação - Valor total da compra correto.", screenshot.capture(driver));
 		} else {
-			report.log(Status.FAIL, "Valor total da compra incorreto.", screenshot.capture(driver));
+			report.log(Status.FAIL, "Validação - Valor total da compra incorreto.", screenshot.capture(driver));
 		}
 	}
-	public void checkAddress() {
-		report.log(Status.PASS, "ADDRESS.", screenshot.capture(driver));
+	public void checkAddress(String address, String city) {
+		if(this.pageContains(address) && this.pageContains(city)) {
+			report.log(Status.PASS, "Validação - O endereço está correto.", screenshot.capture(driver));
+		} else {
+			report.log(Status.FAIL, "Validação - O endereço está incorreto.", screenshot.capture(driver));
+		}
 	}
 }

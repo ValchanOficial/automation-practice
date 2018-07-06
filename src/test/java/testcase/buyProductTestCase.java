@@ -42,15 +42,16 @@ public class buyProductTestCase {
 		report.log(Status.INFO, "O website foi carregado.", screenshot.capture(driver));
 		add.addProductToCart();
 		String name = add.productName();
-		String total = add.total();
 		add.checkout();
 		verificationPoint.checkProduct(name);
+		String total = add.total();
 		add.checkoutSummary();
-		newUser.newAccount("teste@valreeer.com");
-		newUser.personalInformation("Valeria", "P Vargas", "password", "address", "city", "01234", "1589652389");
+		newUser.newAccount("valeria@teste.com");
+		String addressAccount = "Rua Sem Nome, 123";
+		String cityAccount = "Porto Alegre";
+		newUser.personalInformation("Valeria", "Padilha de Vargas", "password", addressAccount, cityAccount, "01234", "1589652389");
 		newUser.submitAccount();
-		report.log(Status.INFO, "Teste.", screenshot.capture(driver));
-		verificationPoint.checkAddress();
+		verificationPoint.checkAddress(addressAccount,cityAccount);
 		address.proceed();
 		shipping.agreeTerms();
 		shipping.proceed();
@@ -59,7 +60,6 @@ public class buyProductTestCase {
 		payment.proceed();
 		verificationPoint.checkOrder();
 		}
-	
 	@After
 	public void tearDown() {
 		driver.quit();
