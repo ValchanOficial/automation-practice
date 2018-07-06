@@ -15,7 +15,7 @@ import testcase.buyProductTestCase;;
 public class regressionTestSuite {
 	@BeforeClass
 	public static void initTest() {
-		report.create("Moodle QA Testing Site", "Suite de Regressao");
+		report.create("Automation Practice Testing Site", "Regression Suite");
 	}
 	@AfterClass
 	public static void endTest() {
