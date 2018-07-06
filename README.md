@@ -1,6 +1,5 @@
 ﻿
 # [](https://github.com/ValchanOficial/automation-practice)Automation Practice - Automação de Teste de Software
-**OBS.: EDITANDO AINDA**
 Site Testado: Automation Practice - My Store - [ www.automationpractice.com]( www.automationpractice.com)
 
 Donwload do projeto: [Automation Practice](https://github.com/ValchanOficial/automation-practice/archive/master.zip).
@@ -47,6 +46,11 @@ Mozilla Firefox: [Mozilla](https://www.mozilla.org/pt-BR/firefox/new/)
  5. Clique em "Finish" e espere o projeto carregar;
  6. Após, clique em "src/test/java";
  7. Clique no pacote "testsuites" e com o botão direito sobre o regressionTestSuite.java e selecione "Run As" e após "JUnit Test";
-![enter image description here](https://lh3.googleusercontent.com/ugv6ZdKxJDSMFDUPcTrqsZRZoodXuU0evtg668yckJSSOHjuZTm1_xxMX83cGGEfAJNthV1tTge3)
- 8. Espere o caso de teste ser executado no navegador web;
- 9. Ao terminar e a barra de status do JUnit ficar verde, acesse a pasta do projeto e clique em "reports" e clique para abrir o report.html no navegador web, você poderá verificar o resultado gerado.
+![Executando teste](https://lh3.googleusercontent.com/yrIjt81CMYy978DjhhDNYBFmhLFoY699wR3t4BExNh9sIbZged-XV7p7kdZdZxPnjDUoXmtBsJ9Q)
+ 8. Na primeira vez de excução o teste irá falhar pois precisa atualizar o navegador para o teste, aguarde a atualização;
+![Atualização do navegador](https://lh3.googleusercontent.com/Ob-Wv73MPjizb5-uXPDYhD0ZyiHwxQ0JKUS3azs3yu8VqZmoJymEiq3LSuaCSYeUGL2pHcMFXAPl)
+ 9. Após terminada execute novamente o teste;
+ ![Executando novamente](https://lh3.googleusercontent.com/lpZDbraJT_uoHQfhgRoulf842k_hliu06W05qll_g1bhsrB1mAHaTYGJuicXmZhVuUS_Vd6tfmdn)
+ 10. Espere o caso de teste ser executado no navegador web;
+ 11. Ao terminar e a barra de status do JUnit ficar verde, acesse a pasta do projeto e clique em "reports" e clique para abrir o report.html no navegador web, você poderá verificar o resultado gerado.
+![Resultado do teste](https://lh3.googleusercontent.com/Yg1SZQrYlxNZygz0al000pLGV7S3MJQ5dtnMH6ZEkmm9wPvyJvKlLXqsIVfZOKGfX3fdfYLo5UvJ)
