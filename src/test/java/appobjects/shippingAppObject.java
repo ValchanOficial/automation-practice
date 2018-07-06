@@ -11,9 +11,9 @@ public class shippingAppObject {
 		this.driver = driver;
 	}
 	public WebElement check() {
-		return this.driver.findElement(By.id("uniform-cgv check"));
+		return this.driver.findElement(By.id("cgv"));
 	}
 	public WebElement proceed() {
-		return this.driver.findElement(By.id("button btn btn-default standard-checkout button-medium proceed"));
+		return this.driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/form/p/button"));
 	}
 }

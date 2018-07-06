@@ -39,6 +39,6 @@ public class verificationPoint {
 		}
 	}
 	public void checkAddress() {
-		
+		report.log(Status.PASS, "ADDRESS.", screenshot.capture(driver));
 	}
 }

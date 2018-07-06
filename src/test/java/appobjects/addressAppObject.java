@@ -11,6 +11,6 @@ public class addressAppObject {
 		this.driver = driver;
 	}
 	public WebElement proceed() {
-		return this.driver.findElement(By.id("button btn btn-default button-medium"));
+		return this.driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/form/p/button"));
 	}
 }

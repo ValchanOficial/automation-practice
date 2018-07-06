@@ -46,8 +46,10 @@ public class buyProductTestCase {
 		add.checkout();
 		verificationPoint.checkProduct(name);
 		add.checkoutSummary();
-		newUser.newAccount("teste@val.com");
-		newUser.personalInformation("Teste", "Teste da Valeria", "123456789", "11  ", "September ", "2018  ", "2018", "Teste", "123456", "1589653285");
+		newUser.newAccount("teste@valreeer.com");
+		newUser.personalInformation("Valeria", "P Vargas", "password", "address", "city", "01234", "1589652389");
+		newUser.submitAccount();
+		report.log(Status.INFO, "Teste.", screenshot.capture(driver));
 		verificationPoint.checkAddress();
 		address.proceed();
 		shipping.agreeTerms();

@@ -3,6 +3,8 @@ package appobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class newUserAppObject {
 	private WebDriver driver;
@@ -17,7 +19,9 @@ public class newUserAppObject {
 		return this.driver.findElement(By.id("SubmitCreate"));
 	}
 	public WebElement title() {
-		return this.driver.findElement(By.id("id_gender2"));
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.name("id_gender")));
+		return element;
 	}
 	public WebElement firstName() {
 		return this.driver.findElement(By.id("customer_firstname"));
@@ -32,7 +36,7 @@ public class newUserAppObject {
 		return this.driver.findElement(By.id("days"));
 	}
 	public WebElement month() {
-		return this.driver.findElement(By.id("uniform-months"));
+		return this.driver.findElement(By.id("months"));
 	}
 	public WebElement year() {
 		return this.driver.findElement(By.id("years"));

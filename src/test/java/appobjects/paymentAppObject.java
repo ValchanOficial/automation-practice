@@ -3,6 +3,8 @@ package appobjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class paymentAppObject {
 	private WebDriver driver;
@@ -11,9 +13,13 @@ public class paymentAppObject {
 		this.driver = driver;
 	}
 	public WebElement payByBankWire() {
-		return this.driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[3]/div[1]"));
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.className("payment_module")));
+		return element;
 	}
 	public WebElement proceed() {
-		return this.driver.findElement(By.id("button btn btn-default button-medium"));
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[2]/div/div[3]/div/form/p/button")));
+		return element;
 	}
 }
